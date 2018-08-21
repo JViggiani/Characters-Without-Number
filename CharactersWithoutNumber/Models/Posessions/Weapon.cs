@@ -3,7 +3,7 @@ namespace CharactersWithoutNumber.Models
 {
     public class Weapon
     {
-        [Key]
+        public int Id { get; set; }
         public string Name { get; set; }
         public int AttackBonus { get; set; }
         public string Skill { get; set; } // how to associate and verify with an existing skill? would be a dropdown in practice

@@ -29,6 +29,8 @@ namespace CharactersWithoutNumber.Controllers
                 Gender = "Male"
             };
 
+            myCharacter.Class = new List<Class>();
+
             return View(myCharacter);
         }
 

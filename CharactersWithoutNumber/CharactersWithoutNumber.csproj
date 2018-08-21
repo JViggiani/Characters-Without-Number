@@ -5,8 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Skills\PsychicSkill.cs" />
+    <Compile Remove="Models\Skills\PsychicTechnique.cs" />
+    <Compile Remove="Models\Skills\Skill.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Skills\" />
   </ItemGroup>
 
 </Project>

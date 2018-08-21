@@ -22,11 +22,18 @@ namespace CharactersWithoutNumber.Models
         public int Wisdom { get; set; }
         public int Charisma { get; set; }
 
-        public ICollection<Background> Background { get; set; } //should this be a list? A character chooses ONE background out of MANY potential backgrounds
+        public Background Background { get; set; } //should this be a list? A character chooses ONE background out of MANY potential backgrounds
+
+        //lookup problem - cqrs
 
         public int ExperiencePoints { get; set; }
 
-        public ICollection<Class> Class { get; set; } //same as Background
+        public Character()
+        {
+            Class = new List<Class>();
+        }
+
+        public IList<Class> Class { get; /*set;*/ } //same as Background
         public ICollection<PartialClass> PartialClasses { get; set; } //dependant on Class = Adventurer
 
         public ICollection<Skill> Skills { get; set; } //a character has every skill at -1 but can upgrade them to 0, then 1 etc 

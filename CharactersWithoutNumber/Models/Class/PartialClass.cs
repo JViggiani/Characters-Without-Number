@@ -5,7 +5,7 @@ namespace CharactersWithoutNumber.Models
 {
     public class PartialClass
     {
-        [Key]
+        public int Id { get; set; }
         public string Name { get; set; }
         public ICollection<PartialClassFoci> PartialClassFoci { get; set; }
     }

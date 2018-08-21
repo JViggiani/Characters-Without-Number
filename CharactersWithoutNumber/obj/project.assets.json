@@ -12224,11 +12224,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Josh\\source\\repos\\CharactersWithoutNumber\\CharactersWithoutNumber\\CharactersWithoutNumber.csproj",
+      "projectUniqueName": "C:\\Users\\Josh\\source\\repos\\CharactersWithoutNumber\\CWN\\CharactersWithoutNumber\\CharactersWithoutNumber.csproj",
       "projectName": "CharactersWithoutNumber",
-      "projectPath": "C:\\Users\\Josh\\source\\repos\\CharactersWithoutNumber\\CharactersWithoutNumber\\CharactersWithoutNumber.csproj",
+      "projectPath": "C:\\Users\\Josh\\source\\repos\\CharactersWithoutNumber\\CWN\\CharactersWithoutNumber\\CharactersWithoutNumber.csproj",
       "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Josh\\source\\repos\\CharactersWithoutNumber\\CharactersWithoutNumber\\obj\\",
+      "outputPath": "C:\\Users\\Josh\\source\\repos\\CharactersWithoutNumber\\CWN\\CharactersWithoutNumber\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

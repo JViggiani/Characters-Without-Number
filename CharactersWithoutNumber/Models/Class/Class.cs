@@ -5,8 +5,8 @@ namespace CharactersWithoutNumber.Models
 {
     public class Class
     {
-        [Key]
-        public string Name { get; set; }
-        public ICollection<ClassFoci> ClassFoci { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; } //surrogate key
+        public ClassFoci ClassFoci { get; set; } //lookup record
     }
 }
