@@ -26,27 +26,27 @@ namespace CharactersWithoutNumber.Models
 
         //lookup problem - cqrs
 
-        public int ExperiencePoints { get; set; }
+        //public int ExperiencePoints { get; set; }
 
-        public Character()
-        {
-            Class = new List<Class>();
-        }
+        //public Character()
+        //{
+        //    Class = new List<Class>();
+        //}
 
-        public IList<Class> Class { get; /*set;*/ } //same as Background
-        public ICollection<PartialClass> PartialClasses { get; set; } //dependant on Class = Adventurer
+        //public IList<Class> Class { get; /*set;*/ } //same as Background
+        //public ICollection<PartialClass> PartialClasses { get; set; } //dependant on Class = Adventurer
 
-        public ICollection<Skill> Skills { get; set; } //a character has every skill at -1 but can upgrade them to 0, then 1 etc 
-        public ICollection<PsychicSkill> PsychicSkills { get; set; }
+        //public ICollection<Skill> Skills { get; set; } //a character has every skill at -1 but can upgrade them to 0, then 1 etc 
+        //public ICollection<PsychicSkill> PsychicSkills { get; set; }
 
-        public int HitPoints { get; set; }
+        //public int HitPoints { get; set; }
 
-        public ICollection<Foci> Foci { get; set; } // a character has at least one foci 
-        public ICollection<PsychicTechnique> PsychicTechniques { get; set; } //a character has techniques which are sort of like foci. They require being at least level 0 in some Psychic Skills 
+        //public ICollection<Foci> Foci { get; set; } // a character has at least one foci 
+        //public ICollection<PsychicTechnique> PsychicTechniques { get; set; } //a character has techniques which are sort of like foci. They require being at least level 0 in some Psychic Skills 
 
-        public ICollection<Weapon> Weapons { get; set; } // a character has many weapons
-        public ICollection<Armour> Armour { get; set; } // one set of armour
-        public ICollection<Gear> Gear { get; set; } // many items, option to add many custom entries required
+        //public ICollection<Weapon> Weapons { get; set; } // a character has many weapons
+        //public ICollection<Armour> Armour { get; set; } // one set of armour
+        //public ICollection<Gear> Gear { get; set; } // many items, option to add many custom entries required
 
     }
 }
