@@ -7,7 +7,16 @@ namespace CharactersWithoutNumber.Models
 {
     public class Character
     {
-        public int Id { get; set; }
+
+        /* 
+        Remember -
+            A character has one strength but could have multiple weapons. So the Weapons property should be a list - it is also a navigation property which points to a Weapon model Entity
+            A character doesn't have to have a partial class. So this should be an enum of form: public PartialClass? PartialClass {get; set;}
+            EF interprets a property as a foreign key if it follows the name format <Model><ID>
+                Eg StudentID
+        */
+
+        public int ID { get; set; }
 
         public string Name { get; set; }
         public string Species { get; set; }
@@ -22,9 +31,9 @@ namespace CharactersWithoutNumber.Models
         public int Wisdom { get; set; }
         public int Charisma { get; set; }
 
-        public Background Background { get; set; } //should this be a list? A character chooses ONE background out of MANY potential backgrounds
+        //public Background Background { get; set; } //should this be a list? A character chooses ONE background out of MANY potential backgrounds
 
-        //lookup problem - cqrs
+        ////lookup problem - cqrs
 
         //public int ExperiencePoints { get; set; }
 

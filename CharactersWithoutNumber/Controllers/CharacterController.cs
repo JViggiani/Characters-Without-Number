@@ -23,7 +23,7 @@ namespace CharactersWithoutNumber.Controllers
             ViewData["Message"] = "Character Sheet Placeholder.";
             var myCharacter = new Character()
             {
-                Id = 1,
+                ID = 1,
                 Name = "Josh",
                 Species = "Human",
                 Gender = "Male"
