@@ -1,0 +1,84 @@
+﻿@model CharactersWithoutNumber.Models.Character
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Character</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Species)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Species)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Faction)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Faction)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Homeworld)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Homeworld)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Strength)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Strength)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dexterity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dexterity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Constitution)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Constitution)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Intelligence)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Intelligence)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Wisdom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Wisdom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Charisma)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Charisma)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
