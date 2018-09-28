@@ -14,6 +14,8 @@ namespace CharactersWithoutNumber.Models
             A character doesn't have to have a partial class. So this should be an enum of form: public PartialClass? PartialClass {get; set;}
             EF interprets a property as a foreign key if it follows the name format <Model><ID>
                 Eg StudentID
+
+            https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/adding-a-new-field
         */
 
         public int ID { get; set; }
@@ -24,16 +26,56 @@ namespace CharactersWithoutNumber.Models
         public string Faction { get; set; }
         public string Homeworld { get; set; }
 
+        public string Background { get; set; } //should this be a list? A character chooses ONE background out of MANY potential backgrounds
+
+        public string Class { get; set; }
+        public string PartialClasses { get; set; }
+
         public int Strength { get; set; }
+        public int StrengthModifierBonus { get; set; }
+        public int StrengthModifier
+        {
+            get
+            {
+                return StrengthModifier;
+            }
+            set
+            {
+                if (Strength <= 3)
+                {
+                    StrengthModifier = -2 + StrengthModifierBonus;
+                }
+                else if (Strength >= 4 && Strength <= 7)
+                {
+                    StrengthModifier = -1 + StrengthModifierBonus;
+                }
+                else if (Strength >= 8 && Strength <= 13)
+                {
+                    StrengthModifier = 0 + StrengthModifierBonus;
+                }
+                else if (Strength >= 14 && Strength <= 17)
+                {
+                    StrengthModifier = 1 + StrengthModifierBonus;
+                }
+                else if (Strength >= 18)
+                {
+                    StrengthModifier = 1 + StrengthModifierBonus;
+                }
+            }
+        }
+
         public int Dexterity { get; set; }
+
         public int Constitution { get; set; }
+
         public int Intelligence { get; set; }
+
         public int Wisdom { get; set; }
+
         public int Charisma { get; set; }
 
-        //public Background Background { get; set; } //should this be a list? A character chooses ONE background out of MANY potential backgrounds
 
-        ////lookup problem - cqrs
+        //lookup problem - cqrs
 
         //public int ExperiencePoints { get; set; }
 

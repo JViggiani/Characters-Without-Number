@@ -15,6 +15,7 @@ namespace CharactersWithoutNumber.Controllers
     {
         private readonly CharacterContext _context;
 
+        //this is the constructor for the class. (this.context = context)
         public CharacterController(CharacterContext context)
         {
             _context = context;
@@ -71,7 +72,7 @@ namespace CharactersWithoutNumber.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Name,Species,Gender,Faction,Homeworld,Strength,Dexterity,Constitution,Intelligence,Wisdom,Charisma")] Character character)
+        public async Task<IActionResult> Create([Bind("ID,Name,Species,Gender,Faction,Homeworld,Background,Class,PartialClasses,Strength,StrengthModifierBonus,StrengthModifier,Dexterity,Constitution,Intelligence,Wisdom,Charisma")] Character character)
         {
             if (ModelState.IsValid)
             {
@@ -103,7 +104,7 @@ namespace CharactersWithoutNumber.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Species,Gender,Faction,Homeworld,Strength,Dexterity,Constitution,Intelligence,Wisdom,Charisma")] Character character)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Species,Gender,Faction,Homeworld,Background,Class,PartialClasses,Strength,StrengthModifierBonus,StrengthModifier,Dexterity,Constitution,Intelligence,Wisdom,Charisma")] Character character)
         {
             if (id != character.ID)
             {

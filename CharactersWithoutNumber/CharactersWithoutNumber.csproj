@@ -9,18 +9,22 @@
     <Compile Remove="Models\Class\**" />
     <Compile Remove="Models\Posessions\**" />
     <Compile Remove="Models\Skills\**" />
+    <Compile Remove="Views\Character_old\**" />
     <Content Remove="Models\Background\**" />
     <Content Remove="Models\Class\**" />
     <Content Remove="Models\Posessions\**" />
     <Content Remove="Models\Skills\**" />
+    <Content Remove="Views\Character_old\**" />
     <EmbeddedResource Remove="Models\Background\**" />
     <EmbeddedResource Remove="Models\Class\**" />
     <EmbeddedResource Remove="Models\Posessions\**" />
     <EmbeddedResource Remove="Models\Skills\**" />
+    <EmbeddedResource Remove="Views\Character_old\**" />
     <None Remove="Models\Background\**" />
     <None Remove="Models\Class\**" />
     <None Remove="Models\Posessions\**" />
     <None Remove="Models\Skills\**" />
+    <None Remove="Views\Character_old\**" />
   </ItemGroup>
 
   <ItemGroup>
