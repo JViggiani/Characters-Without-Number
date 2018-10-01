@@ -33,33 +33,38 @@ namespace CharactersWithoutNumber.Models
 
         public int Strength { get; set; }
         public int StrengthModifierBonus { get; set; }
-        public int StrengthModifier
+            private int _strengthModifier = 0;  //find a way to make this null initially
+        public int StrengthModifier //https://stackoverflow.com/questions/7390902/requiredif-conditional-validation-attribute
         {
             get
             {
-                return StrengthModifier;
+                return _strengthModifier;
             }
             set
             {
                 if (Strength <= 3)
                 {
-                    StrengthModifier = -2 + StrengthModifierBonus;
+                    _strengthModifier = -2 + StrengthModifierBonus;
                 }
                 else if (Strength >= 4 && Strength <= 7)
                 {
-                    StrengthModifier = -1 + StrengthModifierBonus;
+                    _strengthModifier = -1 + StrengthModifierBonus;
                 }
                 else if (Strength >= 8 && Strength <= 13)
                 {
-                    StrengthModifier = 0 + StrengthModifierBonus;
+                    _strengthModifier = 0 + StrengthModifierBonus;
                 }
                 else if (Strength >= 14 && Strength <= 17)
                 {
-                    StrengthModifier = 1 + StrengthModifierBonus;
+                    _strengthModifier = 1 + StrengthModifierBonus;
                 }
                 else if (Strength >= 18)
                 {
-                    StrengthModifier = 1 + StrengthModifierBonus;
+                    _strengthModifier = 2 + StrengthModifierBonus;
+                }
+                else
+                {
+                    _strengthModifier = 0;  //TODO: get it to try to put null in maybe?
                 }
             }
         }
