@@ -31,40 +31,35 @@ namespace CharactersWithoutNumber.Models
         public string Class { get; set; }
         public string PartialClasses { get; set; }
 
-        public int Strength { get; set; }
+        public int Strength { get; set; }   //domain driven design - logic handled on the controller
         public int StrengthModifierBonus { get; set; }
-            private int _strengthModifier = 0;  //find a way to make this null initially
         public int StrengthModifier //https://stackoverflow.com/questions/7390902/requiredif-conditional-validation-attribute
         {
-            get
-            {
-                return _strengthModifier;
-            }
-            set
+            get //TODO: put this logic in a different class - give it the character and return the modifier
             {
                 if (Strength <= 3)
                 {
-                    _strengthModifier = -2 + StrengthModifierBonus;
+                    return -2 + StrengthModifierBonus;
                 }
                 else if (Strength >= 4 && Strength <= 7)
                 {
-                    _strengthModifier = -1 + StrengthModifierBonus;
+                    return -1 + StrengthModifierBonus;
                 }
                 else if (Strength >= 8 && Strength <= 13)
                 {
-                    _strengthModifier = 0 + StrengthModifierBonus;
+                    return 0 + StrengthModifierBonus;
                 }
                 else if (Strength >= 14 && Strength <= 17)
                 {
-                    _strengthModifier = 1 + StrengthModifierBonus;
+                    return 1 + StrengthModifierBonus;
                 }
                 else if (Strength >= 18)
                 {
-                    _strengthModifier = 2 + StrengthModifierBonus;
+                    return 2 + StrengthModifierBonus;
                 }
                 else
                 {
-                    _strengthModifier = 0;  //TODO: get it to try to put null in maybe?
+                    return 0;  //TODO: get it to try to put null in maybe?
                 }
             }
         }
