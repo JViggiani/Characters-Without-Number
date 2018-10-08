@@ -31,48 +31,67 @@ namespace CharactersWithoutNumber.Models
         public string Class { get; set; }
         public string PartialClasses { get; set; }
 
-        public int Strength { get; set; }   //domain driven design - logic handled on the controller
+        //public Attribute Strength { get; set; }
+
+        public int Strength { get; set; }   //domain driven design - logic handled on the controller https://www.thereformedprogrammer.net/creating-domain-driven-design-entity-classes-with-entity-framework-core/
         public int StrengthModifierBonus { get; set; }
-        public int StrengthModifier //https://stackoverflow.com/questions/7390902/requiredif-conditional-validation-attribute
+        public int StrengthModifier 
         {
-            get //TODO: put this logic in a different class - give it the character and return the modifier
+            get 
             {
-                if (Strength <= 3)
-                {
-                    return -2 + StrengthModifierBonus;
-                }
-                else if (Strength >= 4 && Strength <= 7)
-                {
-                    return -1 + StrengthModifierBonus;
-                }
-                else if (Strength >= 8 && Strength <= 13)
-                {
-                    return 0 + StrengthModifierBonus;
-                }
-                else if (Strength >= 14 && Strength <= 17)
-                {
-                    return 1 + StrengthModifierBonus;
-                }
-                else if (Strength >= 18)
-                {
-                    return 2 + StrengthModifierBonus;
-                }
-                else
-                {
-                    return 0;  //TODO: get it to try to put null in maybe?
-                }
+                return (new AttributeBonus(Strength, StrengthModifierBonus)).Modifier;
             }
         }
 
         public int Dexterity { get; set; }
+        public int DexterityModifierBonus { get; set; }
+        public int DexterityModifier
+        {
+            get
+            {
+                return (new AttributeBonus(Dexterity, DexterityModifierBonus)).Modifier;
+            }
+        }
 
         public int Constitution { get; set; }
+        public int ConstitutionModifierBonus { get; set; }
+        public int ConstitutionModifier
+        {
+            get
+            {
+                return (new AttributeBonus(Constitution, ConstitutionModifierBonus)).Modifier;
+            }
+        }
 
         public int Intelligence { get; set; }
+        public int IntelligenceModifierBonus { get; set; }
+        public int IntelligenceModifier
+        {
+            get
+            {
+                return (new AttributeBonus(Intelligence, IntelligenceModifierBonus)).Modifier;
+            }
+        }
 
         public int Wisdom { get; set; }
+        public int WisdomModifierBonus { get; set; }
+        public int WisdomModifier
+        {
+            get
+            {
+                return (new AttributeBonus(Wisdom, WisdomModifierBonus)).Modifier;
+            }
+        }
 
         public int Charisma { get; set; }
+        public int CharismaModifierBonus { get; set; }
+        public int CharismaModifier
+        {
+            get
+            {
+                return (new AttributeBonus(Charisma, CharismaModifierBonus)).Modifier;
+            }
+        }
 
 
         //lookup problem - cqrs
@@ -83,6 +102,8 @@ namespace CharactersWithoutNumber.Models
         //{
         //    Class = new List<Class>();
         //}
+
+        //public IEnumerable<Review> Reviews => _reviews?.ToList(); ==> one-to-many.. IEnumerable means can't add or remove items, instead use access methods in Review class
 
         //public IList<Class> Class { get; /*set;*/ } //same as Background
         //public ICollection<PartialClass> PartialClasses { get; set; } //dependant on Class = Adventurer
