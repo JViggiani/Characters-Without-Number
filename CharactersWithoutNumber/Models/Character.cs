@@ -31,8 +31,6 @@ namespace CharactersWithoutNumber.Models
         public string Class { get; set; }
         public string PartialClasses { get; set; }
 
-        //public Attribute Strength { get; set; }
-
         public int Strength { get; set; }   //domain driven design - logic handled on the controller https://www.thereformedprogrammer.net/creating-domain-driven-design-entity-classes-with-entity-framework-core/
         public int StrengthModifierBonus { get; set; }
         public int StrengthModifier 
@@ -97,11 +95,6 @@ namespace CharactersWithoutNumber.Models
         //lookup problem - cqrs
 
         //public int ExperiencePoints { get; set; }
-
-        //public Character()
-        //{
-        //    Class = new List<Class>();
-        //}
 
         //public IEnumerable<Review> Reviews => _reviews?.ToList(); ==> one-to-many.. IEnumerable means can't add or remove items, instead use access methods in Review class
 

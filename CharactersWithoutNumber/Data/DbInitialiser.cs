@@ -31,10 +31,15 @@ namespace CharactersWithoutNumber.Data
                 Strength =11,
                 StrengthModifierBonus =0,
                 Dexterity =10,
+                DexterityModifierBonus =0,
                 Constitution =10,
+                ConstitutionModifierBonus =0,
                 Intelligence =14,
+                IntelligenceModifierBonus =0,
                 Wisdom =12,
-                Charisma =11},
+                WisdomModifierBonus =0,
+                Charisma =11,
+                CharismaModifierBonus =0 },
             new Character
             {
                 Name ="Elijah Holt",
@@ -48,10 +53,15 @@ namespace CharactersWithoutNumber.Data
                 Strength =9,
                 StrengthModifierBonus=0,
                 Dexterity =14,
+                DexterityModifierBonus=0,
                 Constitution =15,
+                ConstitutionModifierBonus=0,
                 Intelligence =14,
+                IntelligenceModifierBonus=0,
                 Wisdom =14,
-                Charisma =12},
+                WisdomModifierBonus=0,
+                Charisma =12,
+                CharismaModifierBonus=0,},
             new Character
             {
                 Name ="Frederick Danton",
@@ -82,10 +92,15 @@ namespace CharactersWithoutNumber.Data
                 Strength =14,
                 StrengthModifierBonus =0,
                 Dexterity =14,
+                DexterityModifierBonus =1,
                 Constitution =14,
+                ConstitutionModifierBonus =0,
                 Intelligence =11,
+                IntelligenceModifierBonus =0,
                 Wisdom =12,
-                Charisma =12},
+                WisdomModifierBonus =0,
+                Charisma =12,
+                CharismaModifierBonus =0,},
             };
             foreach (Character c in characters)
             {

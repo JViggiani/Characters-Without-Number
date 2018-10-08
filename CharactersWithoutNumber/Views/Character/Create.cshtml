@@ -287,7 +287,7 @@
                                 </td>
                                 <td>
                                     <!-- // (at symbol)Model.StrengthModifier; -->
-                                    @Html.DisplayNameFor(Character => Character.StrengthModifier)   <!--TODO: have this dynamically change when Strength etc changes using JS-->
+                                    @Html.DisplayFor(Character => Character.StrengthModifier)   <!--TODO: have this dynamically change when Strength etc changes using JS-->
                                 </td>
                             </tr>
                             <tr>
@@ -300,8 +300,15 @@
                                         <span asp-validation-for="Dexterity" class="text-danger"></span>
                                     </div>
                                 </td>
-                                <td><input id="DexterityBonusInput" type="text" class="form-control.col-sm-1" /></td>
-                                <td>+1</td>
+                                <td>
+                                    <div class="form-group">
+                                        <input asp-for="DexterityModifierBonus" class="form-control" />
+                                        <span asp-validation-for="DexterityModifierBonus" class="text-danger"></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(Character => Character.DexterityModifier)  
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">
@@ -313,19 +320,35 @@
                                         <span asp-validation-for="Constitution" class="text-danger"></span>
                                     </div>
                                 </td>
-                                <td><input id="ConstitutionBonusInput" type="text" class="form-control.col-sm-1" /></td>
-                                <td>+1</td>
+                                <td>
+                                    <div class="form-group">
+                                        <input asp-for="ConstitutionModifierBonus" class="form-control" />
+                                        <span asp-validation-for="ConstitutionModifierBonus" class="text-danger"></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(Character => Character.ConstitutionModifier)
+                                </td>
                             </tr>
                             <tr>
-                                <th scope="row"><label asp-for="Intelligence" class="control-label"></label></th>
+                                <th scope="row">
+                                    <label asp-for="Intelligence" class="control-label"></label>
+                                </th>
                                 <td>
                                     <div class="form-group">
                                         <input asp-for="Intelligence" class="form-control" />
                                         <span asp-validation-for="Intelligence" class="text-danger"></span>
                                     </div>
                                 </td>
-                                <td><input id="IntelligenceBonusInput" type="text" class="form-control.col-sm-1" /></td>
-                                <td>+1</td>
+                                <td>
+                                    <div class="form-group">
+                                        <input asp-for="IntelligenceModifierBonus" class="form-control" />
+                                        <span asp-validation-for="IntelligenceModifierBonus" class="text-danger"></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(Character => Character.IntelligenceModifier)  
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">
@@ -337,8 +360,15 @@
                                         <span asp-validation-for="Wisdom" class="text-danger"></span>
                                     </div>
                                 </td>
-                                <td><input id="WisdomBonusInput" type="text" class="form-control.col-sm-1" /></td>
-                                <td>+1</td>
+                                <td>
+                                    <div class="form-group">
+                                        <input asp-for="WisdomModifierBonus" class="form-control" />
+                                        <span asp-validation-for="WisdomModifierBonus" class="text-danger"></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(Character => Character.WisdomModifier) 
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">
@@ -350,8 +380,15 @@
                                         <span asp-validation-for="Charisma" class="text-danger"></span>
                                     </div>
                                 </td>
-                                <td><input id="CharismaBonusInput" type="text" class="form-control.col-sm-1" /></td>
-                                <td>+1</td>
+                                <td>
+                                    <div class="form-group">
+                                        <input asp-for="CharismaModifierBonus" class="form-control" />
+                                        <span asp-validation-for="CharismaModifierBonus" class="text-danger"></span>
+                                    </div>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(Character => Character.CharismaModifier)  
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -377,6 +414,13 @@
                         <div class="col-xs-12 col-sm-6 col-md-3">
                             <label for="Administer">Administer</label>
                             <input id="Administer" type="text" class="form-control" />
+
+                            <!--
+    <div class="form-group">
+        <input asp-for="Administer" class="form-control" />
+        <span asp-validation-for="Administer" class="text-danger"></span>
+    </div>
+        -->
 
                             <label for="Connect">Connect</label>
                             <input id="Connect" type="text" class="form-control" />
