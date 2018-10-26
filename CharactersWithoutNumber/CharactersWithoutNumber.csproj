@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <Compile Remove="Controllers\CharacterController_Old.cs" />
+    <Compile Remove="Models\AttributeBonus.cs" />
   </ItemGroup>
 
   <ItemGroup>
